@@ -1,0 +1,134 @@
+{
+  "data_set_location": "U_NET",
+  "prediction_conf": {
+    "blur_kernel_dim": 3,
+    "upper_threshold_limit": 255,
+    "lower_threshold_limit": 250
+  },
+  "training_configuration": {
+    "enable_training": false,
+    "training_parameters": {
+      "epoch_num": 25,
+      "batch_size": 16,
+      "validation_split_ratio": 0.025
+    },
+    "call_backs_conf": {
+      "ReduceLROnPlateau": {
+        "patience": 5,
+        "verbose": 1,
+        "factor": 0.1
+      },
+      "EarlyStopping": {
+        "patience": 10,
+        "verbose": 1,
+        "restore_best_weights": false
+      }
+    }
+  },
+  "model_structure": {
+    "encoder_params": {
+      "general_conv_params": {
+        "kernel_size": [
+          3,
+          3
+        ],
+        "activation": "elu",
+        "padding": "same",
+        "kernel_initializer": "he_normal"
+      },
+      "max_pool_size": [
+        2,
+        2
+      ],
+      "changing_conv_params": {
+        "encoder_block_1": {
+          "dropout_rate": 0.1,
+          "filter_size": 16
+        },
+        "encoder_block_2": {
+          "dropout_rate": 0.1,
+          "filter_size": 32
+        },
+        "encoder_block_3": {
+          "dropout_rate": 0.2,
+          "filter_size": 64
+        },
+        "encoder_block_4": {
+          "dropout_rate": 0.2,
+          "filter_size": 128
+        },
+        "encoder_block_5": {
+          "dropout_rate": 0.3,
+          "filter_size": 256
+        }
+      }
+    },
+    "bottle_neck_params": {
+      "general_conv_params": {
+        "kernel_size": [
+          3,
+          3
+        ],
+        "activation": "elu",
+        "padding": "same",
+        "kernel_initializer": "he_normal"
+      },
+      "changing_conv_params": {
+        "dropout_rate": 0.3,
+        "filter_size": 512
+      }
+    },
+    "decoder_params": {
+      "general_conv_params": {
+        "kernel_size": [
+          3,
+          3
+        ],
+        "activation": "elu",
+        "padding": "same",
+        "kernel_initializer": "he_normal"
+      },
+      "general_transpose_conv_params": {
+        "kernel_size": [
+          2,
+          2
+        ],
+        "padding": "same",
+        "strides": [
+          2,
+          2
+        ]
+      },
+      "changing_conv_params": {
+        "decoder_block_1": {
+          "dropout_rate": 0.3,
+          "filter_size": 256,
+          "concatenate_layer": "encoder_block_5"
+        },
+        "decoder_block_2": {
+          "dropout_rate": 0.2,
+          "filter_size": 128,
+          "concatenate_layer": "encoder_block_4"
+        },
+        "decoder_block_3": {
+          "dropout_rate": 0.2,
+          "filter_size": 64,
+          "concatenate_layer": "encoder_block_3"
+        },
+        "decoder_block_4": {
+          "dropout_rate": 0.1,
+          "filter_size": 32,
+          "concatenate_layer": "encoder_block_2"
+        },
+        "decoder_block_5": {
+          "dropout_rate": 0.1,
+          "filter_size": 16,
+          "concatenate_layer": "encoder_block_1"
+        }
+      }
+    }
+  }
+}
+
+
+

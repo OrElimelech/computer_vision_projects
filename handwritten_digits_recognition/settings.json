@@ -1,0 +1,48 @@
+{
+  "training_config": {
+    "enable_training": false,
+    "epochs": 50,
+    "batch_size": 32,
+    "call_backs_conf": {
+      "EarlyStopping": {
+        "patience": 5,
+        "verbose": 1
+      }
+    }
+  },
+  "data_config": {
+    "image_shape": {
+      "image_rows": 32,
+      "image_columns": 32,
+      "channel_numbers": 3
+    },
+    "data_augmentation": {
+      "rotation_range": 10
+    }
+  },
+  "model_configuration": {
+    "model_name": "VGG16",
+    "model_top_config": {
+      "Flatten_Layer": {
+        "initializing_parameters": {},
+        "layer_type": "Flatten"
+      },
+      "dense_1": {
+        "initializing_parameters": {
+          "units": 1000,
+          "activation": "relu"
+        },
+        "input_layer": "Flatten_Layer",
+        "layer_type": "Dense"
+      },
+      "dense_2": {
+        "initializing_parameters": {
+          "units": 10,
+          "activation": "softmax"
+        },
+        "input_layer": "dense_1",
+        "layer_type": "Dense"
+      }
+    }
+  }
+}
