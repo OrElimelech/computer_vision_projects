@@ -5,13 +5,13 @@
     "data_dimension": 400
   },
   "training_conf": {
-    "enable_training": true,
-    "validation_ratio": 0.02,
-    "epoch_num": 15,
-    "batch_size": 16,
+    "enable_training": false,
+    "validation_ratio": 0.03,
+    "epoch_num": 25,
+    "batch_size": 10,
     "object_existence_loss_weight": 0.5,
-    "bounding_box_loss_weight": 3,
-    "optimizer_learning_rate": 0.0001
+    "bounding_box_loss_weight": 5,
+    "optimizer_learning_rate": 0.00001
   },
   "model_conf": {
     "model_type": "VGG16",
@@ -20,12 +20,36 @@
         "initializing_parameters": {},
         "layer_type": "Flatten"
       },
+      "dense_128_1": {
+        "initializing_parameters": {
+          "units": 128,
+          "activation": "relu"
+        },
+        "input_layer": "Flatten_Layer",
+        "layer_type": "Dense"
+      },
+      "dense_128_2": {
+        "initializing_parameters": {
+          "units": 128,
+          "activation": "relu"
+        },
+        "input_layer": "dense_128_1",
+        "layer_type": "Dense"
+      },
+      "dense_64": {
+        "initializing_parameters": {
+          "units": 64,
+          "activation": "relu"
+        },
+        "input_layer": "dense_128_2",
+        "layer_type": "Dense"
+      },
       "dense_1_existence": {
         "initializing_parameters": {
           "units": 5,
           "activation": "sigmoid"
         },
-        "input_layer": "Flatten_Layer",
+        "input_layer": "dense_64",
         "layer_type": "Dense"
       }
     }
