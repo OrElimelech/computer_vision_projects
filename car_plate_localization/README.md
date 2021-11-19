@@ -46,9 +46,9 @@ used data set: "https://www.kaggle.com/andrewmvd/car-plate-detection"
 
 
 
-####Total params: 24,177,093
-####Trainable params: 9,462,405
-####Non-trainable params: 14,714,688
+Total params: 24,177,093\
+Trainable params: 9,462,405\
+Non-trainable params: 14,714,688\
 
 
 
