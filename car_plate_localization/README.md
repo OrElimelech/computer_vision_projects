@@ -46,9 +46,9 @@ used data set: "https://www.kaggle.com/andrewmvd/car-plate-detection"
 
 
 
-Total params: 24,177,093
-Trainable params: 9,462,405
-Non-trainable params: 14,714,688
+####Total params: 24,177,093
+####Trainable params: 9,462,405
+####Non-trainable params: 14,714,688
 
 
 
@@ -57,18 +57,20 @@ Non-trainable params: 14,714,688
 
 ### Data configuration
 
+####
 ####"data_set_conf": {
 ####    "annotations_path": "car_plates_dataset/annotations",
 ####    "images_path": "car_plates_dataset/images",
 ####    "data_dimension": 400
 ####	}
 
-####"annotations_path": path to xml files of the dataset
-####"images_path":   path to images files of the dataset
-####"data_dimension": image dimensions, will be changed according to this input (I used 400x400)
+####annotations_path: path to xml files of the dataset
+####images_path:   path to images files of the dataset
+####data_dimension: image dimensions, will be changed according to this input (I used 400x400)
 
 ### Training configuration
 
+####
 ####"training_conf": {
 ####    "enable_training": true,
 ####    "validation_ratio": 0.03,
@@ -80,17 +82,18 @@ Non-trainable params: 14,714,688
 ####  }
 
 
-####"enable_training": enables training, if on false will search for a saved model in the projects directory
-####"validation_ratio": divides the data set into validation and training
-####"epoch_num": number of epoch for training
-####"batch_size": batch size for every epoch. splits the data
-####"object_existence_loss_weight": object loss weight
-####"bounding_box_loss_weight": bounding box regression loss weight
-####"optimizer_learning_rate": adam learning rate
+####enable_training: enables training, if on false will search for a saved model in the projects directory
+####validation_ratio: divides the data set into validation and training
+####epoch_num: number of epoch for training
+####batch_size: batch size for every epoch. splits the data
+####object_existence_loss_weight: object loss weight
+####bounding_box_loss_weight: bounding box regression loss weight
+####optimizer_learning_rate: adam learning rate
 
 
 ### Model Configuration
 
+####
 ####"model_conf": {
 ####    "model_type": "VGG16",
 ####    "model_top_config": {
@@ -133,11 +136,12 @@ Non-trainable params: 14,714,688
 ####    }
 ####  }
   
-####"model_type": type of the model's back bone - supports VGG16,VGG19 and Resnet50
-####"model_top_config": model's top configuration for fine tuning
+####model_type: type of the model's back bone - supports VGG16,VGG19 and Resnet50
+####model_top_config: model's top configuration for fine tuning
 
 ### Callback Configuration
 
+####
 ####"call_back_conf": {
 ####    "ReduceLROnPlateau": {
 ####      "patience": 5,
@@ -146,13 +150,13 @@ Non-trainable params: 14,714,688
 ####    }
 ####  }
 
-####"ReduceLROnPlateau": indicates the type of callback. LearningRateScheduler, ModelCheckpoint and EarlyStopping are also supported. the rest of the 
+####ReduceLROnPlateau: indicates the type of callback. LearningRateScheduler, ModelCheckpoint and EarlyStopping are also supported. the rest of the 
 ####parameters are just initialized class members
 
 ## Notes
 ------
-it seems that the detection part of the classifier works quite well but the bounding box detection can be improved
-by using anchor bounding box from the used data set (with K-mean) and IoU calculations. 
-Those are used in the Yolo architecture. Those methods will be explored in other projects.
+####it seems that the detection part of the classifier works quite well but the bounding box detection can be improved
+####by using anchor bounding box from the used data set (with K-mean) and IoU calculations. 
+####Those are used in the Yolo architecture. Those methods will be explored in other projects.
 
-please check result folder to see outcome examples
+####please check result folder to see outcome examples
