@@ -1,7 +1,7 @@
 {
   "training_config": {
     "enable_training": false,
-    "epochs": 50,
+    "epochs": 25,
     "batch_size": 32,
     "call_backs_conf": {
       "EarlyStopping": {
