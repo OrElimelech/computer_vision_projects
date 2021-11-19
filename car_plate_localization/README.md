@@ -48,7 +48,7 @@ used data set: "https://www.kaggle.com/andrewmvd/car-plate-detection"
 
 Total params: 24,177,093\
 Trainable params: 9,462,405\
-Non-trainable params: 14,714,688\
+Non-trainable params: 14,714,688
 
 
 
@@ -57,16 +57,16 @@ Non-trainable params: 14,714,688\
 
 ### Data configuration
 
-####
-####"data_set_conf": {
-####    "annotations_path": "car_plates_dataset/annotations",
-####    "images_path": "car_plates_dataset/images",
-####    "data_dimension": 400
-####	}
 
-####annotations_path: path to xml files of the dataset
-####images_path:   path to images files of the dataset
-####data_dimension: image dimensions, will be changed according to this input (I used 400x400)
+"data_set_conf": { \
+    "annotations_path": "car_plates_dataset/annotations", \
+    "images_path": "car_plates_dataset/images", \
+    "data_dimension": 400 \
+	}\
+
+annotations_path: path to xml files of the dataset\
+images_path:   path to images files of the dataset\
+data_dimension: image dimensions, will be changed according to this input (I used 400x400)\
 
 ### Training configuration
 
