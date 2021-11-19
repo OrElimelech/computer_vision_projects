@@ -5,7 +5,7 @@
     "data_dimension": 400
   },
   "training_conf": {
-    "enable_training": false,
+    "enable_training": true,
     "validation_ratio": 0.03,
     "epoch_num": 25,
     "batch_size": 10,
