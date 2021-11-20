@@ -174,11 +174,15 @@ __ReduceLROnPlateau__: indicates the type of callback. LearningRateScheduler, Mo
 ------
 
 ![Training Loss Graph](https://github.com/OrElimelech/computer_vision_projects/blob/main/car_plate_localization/results/training%20loss%20Graph.jpg "Training Loss Graph")
+![Validation Loss Graph](https://github.com/OrElimelech/computer_vision_projects/blob/main/car_plate_localization/results/validation%20val_loss%20Graph.jpg "Validation Loss Graph")
+![Plate Detection Example - Plate in Image](https://github.com/OrElimelech/computer_vision_projects/blob/main/car_plate_localization/results/result5.JPG "Plate Detection Example - Plate in Image")
+![Plate Detection Example - No Plate in Image](https://github.com/OrElimelech/computer_vision_projects/blob/main/car_plate_localization/results/result7.JPG "Plate Detection Example - No Plate in Image")
+
 
 ## Notes
 ------
 __it seems that the detection part of the classifier works quite well but the bounding box detection can be improved__\
-__by using anchor bounding box from the used data set (with K-mean) and IoU calculations.__ 
-__Those are used in the Yolo architecture. Those methods will be explored in other projects.__
-__please check result folder to see outcome additional examples.__
+__by using anchor bounding box from the used data set (with K-mean) and IoU calculations.__\ 
+__Those are used in the Yolo architecture. Those methods will be explored in other projects.__\
+__please check result folder to see outcome additional examples.__\
 __You can also add your own imges by just putting them in the test_images folder.__
