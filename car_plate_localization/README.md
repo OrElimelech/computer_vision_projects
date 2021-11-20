@@ -180,5 +180,5 @@ __ReduceLROnPlateau__: indicates the type of callback. LearningRateScheduler, Mo
 __it seems that the detection part of the classifier works quite well but the bounding box detection can be improved__\
 __by using anchor bounding box from the used data set (with K-mean) and IoU calculations.__ 
 __Those are used in the Yolo architecture. Those methods will be explored in other projects.__
-
-__please check result folder to see outcome additional examples__
+__please check result folder to see outcome additional examples.__
+__You can also add your own imges by just putting them in the test_images folder.__
