@@ -58,7 +58,7 @@ __Non-trainable params: 14,714,688__
 ### Data configuration
 
 
->__"data_set_conf": {__  \
+>__"data_set_conf": {__
 >>__"annotations_path": "car_plates_dataset/annotations",__  \
 >>__"images_path": "car_plates_dataset/images",__  \
 >>__"data_dimension": 400__  \
@@ -70,25 +70,25 @@ __data_dimension__: image dimensions, will be changed according to this input (I
 
 ### Training configuration
 
-####
-####"training_conf": {
-####    "enable_training": true,
-####    "validation_ratio": 0.03,
-####    "epoch_num": 25,
-####    "batch_size": 10,
-####    "object_existence_loss_weight": 0.5,
-####    "bounding_box_loss_weight": 5,
-####    "optimizer_learning_rate": 0.00001
-####  }
+
+>__"training_conf": {__
+>>__    "enable_training": true,__\
+>>__    "validation_ratio": 0.03,__\
+>>__    "epoch_num": 25,__\
+>>__    "batch_size": 10,__\
+>>__    "object_existence_loss_weight": 0.5,__\
+>>__    "bounding_box_loss_weight": 5,__\
+>>__    "optimizer_learning_rate": 0.00001__\
+>__  }__
 
 
-####enable_training: enables training, if on false will search for a saved model in the projects directory
-####validation_ratio: divides the data set into validation and training
-####epoch_num: number of epoch for training
-####batch_size: batch size for every epoch. splits the data
-####object_existence_loss_weight: object loss weight
-####bounding_box_loss_weight: bounding box regression loss weight
-####optimizer_learning_rate: adam learning rate
+__enable_training__: enables training, if on false will search for a saved model in the projects directory\
+__validation_ratio__: divides the data set into validation and training\
+__epoch_num__: number of epoch for training\
+__batch_size__: batch size for every epoch. splits the data\
+__object_existence_loss_weight__: object loss weight\
+__bounding_box_loss_weight__: bounding box regression loss weight\
+__optimizer_learning_rate__: adam learning rate\
 
 
 ### Model Configuration
