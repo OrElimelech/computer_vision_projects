@@ -1,12 +1,7 @@
 {
   "data_set_location": "U_NET",
-  "prediction_conf": {
-    "blur_kernel_dim": 3,
-    "upper_threshold_limit": 255,
-    "lower_threshold_limit": 250
-  },
   "training_configuration": {
-    "enable_training": false,
+    "enable_training": true,
     "training_parameters": {
       "epoch_num": 25,
       "batch_size": 16,

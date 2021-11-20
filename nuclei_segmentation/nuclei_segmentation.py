@@ -68,7 +68,6 @@ if __name__ == "__main__":
     config_handler = ConfigurationHandler()
     data_set_path = config_handler.get_config_value("data_set_location")
     training_conf = config_handler.get_config_value("training_configuration")
-    prediction_conf = config_handler.get_config_value("prediction_conf")
 
     ###########################################################################
     # Data Arranging
