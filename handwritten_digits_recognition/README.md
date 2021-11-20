@@ -153,8 +153,11 @@ __model_top_config__: model's top configuration for fine tuning.
 ![Validation Loss Graph](https://github.com/OrElimelech/computer_vision_projects/blob/main/handwritten_digits_recognition/results/validation%20val_loss%20Graph.jpg "Validation Loss Graph")
 ![Training Accuracy Graph](https://github.com/OrElimelech/computer_vision_projects/blob/main/handwritten_digits_recognition/results/training%20accuracy%20Graph.jpg "Training Accuracy Graph")
 ![Validation Accuracy Graph](https://github.com/OrElimelech/computer_vision_projects/blob/main/handwritten_digits_recognition/results/validation%20val_accuracy%20Graph.jpg "Validation Accuracy Graph")
+
 ![Result Sample-1](https://github.com/OrElimelech/computer_vision_projects/blob/main/handwritten_digits_recognition/results/result1.JPG "Result Sample-1")
+
 ![Result Sample-2](https://github.com/OrElimelech/computer_vision_projects/blob/main/handwritten_digits_recognition/results/result2.JPG "Result Sample-2")
+
 ![Result Sample-3](https://github.com/OrElimelech/computer_vision_projects/blob/main/handwritten_digits_recognition/results/result3.JPG "Result Sample-3")
 
 
