@@ -157,22 +157,23 @@ __model_top_config__: model's top configuration for fine tuning.
 
 ### Callback Configuration
 
-####
-####"call_back_conf": {
-####    "ReduceLROnPlateau": {
-####      "patience": 5,
-####      "verbose": 1,
-####      "factor": 0.00005
-####    }
-####  }
+```yaml
+"call_back_conf": {
+    "ReduceLROnPlateau": {
+      "patience": 5,
+      "verbose": 1,
+      "factor": 0.00005
+    }
+  }
 
-####ReduceLROnPlateau: indicates the type of callback. LearningRateScheduler, ModelCheckpoint and EarlyStopping are also supported. the rest of the 
-####parameters are just initialized class members
+```
+
+__ReduceLROnPlateau__: indicates the type of callback. LearningRateScheduler, ModelCheckpoint and EarlyStopping are also supported. the rest of the parameters are just initialized class members.
 
 ## Notes
 ------
-####it seems that the detection part of the classifier works quite well but the bounding box detection can be improved
-####by using anchor bounding box from the used data set (with K-mean) and IoU calculations. 
-####Those are used in the Yolo architecture. Those methods will be explored in other projects.
+__it seems that the detection part of the classifier works quite well but the bounding box detection can be improved__\
+__by using anchor bounding box from the used data set (with K-mean) and IoU calculations.__ 
+__Those are used in the Yolo architecture. Those methods will be explored in other projects.__
 
-####please check result folder to see outcome examples
+__please check result folder to see outcome additional examples__
