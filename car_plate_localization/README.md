@@ -59,10 +59,10 @@ __Non-trainable params: 14,714,688__
 
 
 __"data_set_conf": {__\
-    __"annotations_path": "car_plates_dataset/annotations",__ \
-    __"images_path": "car_plates_dataset/images",__ .
-    __"data_dimension": 400__ \
-	__}__
+   __"annotations_path": "car_plates_dataset/annotations",__ \
+   __"images_path": "car_plates_dataset/images",__ .
+   __"data_dimension": 400__ \
+   __}__
 
 __annotations_path__: path to xml files of the dataset.\
 __images_path__:   path to images files of the dataset.\
