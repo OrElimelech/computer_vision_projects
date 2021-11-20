@@ -75,7 +75,7 @@ __data_dimension__: image dimensions, will be changed according to this input (I
 >>__"enable_training": true,__\
 >>__"validation_ratio": 0.03,__\
 >>__"epoch_num": 25,__\
->>__ "batch_size": 10,__\
+>>__"batch_size": 10,__\
 >>__"object_existence_loss_weight": 0.5,__\
 >>__"bounding_box_loss_weight": 5,__\
 >>__"optimizer_learning_rate": 0.00001__\
@@ -94,18 +94,18 @@ __optimizer_learning_rate__: adam learning rate\
 ### Model Configuration
 
 ####
-####"model_conf": {
-####    "model_type": "VGG16",
-####    "model_top_config": {
-####      "Flatten_Layer": {
-####        "initializing_parameters": {},
-####        "layer_type": "Flatten"
-####      },
-####      "dense_128_1": {
-####        "initializing_parameters": {
-####          "units": 128,
-####          "activation": "relu"
-####        },
+>__"model_conf": {
+>>__"model_type": "VGG16",
+>>__"model_top_config": {
+>>>__"Flatten_Layer": {
+>>>>__"initializing_parameters": {},
+>>>>__"layer_type": "Flatten"
+>>>>__},
+>>>__"dense_128_1": {
+>>>>__"initializing_parameters": {
+>>>>__"units": 128,
+>>>>__"activation": "relu"
+>>>>__},
 ####       "input_layer": "Flatten_Layer",
 ####        "layer_type": "Dense"
 ####      },
