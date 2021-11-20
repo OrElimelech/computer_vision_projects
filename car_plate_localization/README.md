@@ -170,6 +170,11 @@ __model_top_config__: model's top configuration for fine tuning.
 
 __ReduceLROnPlateau__: indicates the type of callback. LearningRateScheduler, ModelCheckpoint and EarlyStopping are also supported. the rest of the parameters are just initialized class members.
 
+## Results
+------
+
+![Training Loss Graph](/results/training%20loss%20Graph.jpg "Training Loss Graph")
+
 ## Notes
 ------
 __it seems that the detection part of the classifier works quite well but the bounding box detection can be improved__\
