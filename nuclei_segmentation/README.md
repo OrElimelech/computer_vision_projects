@@ -4,7 +4,7 @@
 ## Description
 ------
 This project utilizes the U-net capabilities to create mask images from input images of cells.\
-The U-net blocks number can be changed and altered for experimentation
+The U-net blocks number can be changed and altered for experimentation via configuration
 
 
 
