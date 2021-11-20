@@ -173,7 +173,7 @@ __ReduceLROnPlateau__: indicates the type of callback. LearningRateScheduler, Mo
 ## Results
 ------
 
-![Training Loss Graph](/results/training%20loss%20Graph.jpg "Training Loss Graph")
+![Training Loss Graph](https://github.com/OrElimelech/computer_vision_projects/blob/main/car_plate_localization/results/training%20loss%20Graph.jpg "Training Loss Graph")
 
 ## Notes
 ------
