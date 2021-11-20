@@ -68,12 +68,6 @@ __Non-trainable params: 14,714,688__
 ```
 
 
->__"data_set_conf": {__
->>__"annotations_path": "car_plates_dataset/annotations",__  \
->>__"images_path": "car_plates_dataset/images",__  \
->>__"data_dimension": 400__  \
->__}__
-
 __annotations_path__: path to xml files of the dataset.\
 __images_path__:   path to images files of the dataset.\
 __data_dimension__: image dimensions, will be changed according to this input (I used 400x400)
@@ -81,15 +75,20 @@ __data_dimension__: image dimensions, will be changed according to this input (I
 ### Training configuration
 
 
->__"training_conf": {__
->>__"enable_training": true,__\
->>__"validation_ratio": 0.03,__\
->>__"epoch_num": 25,__\
->>__"batch_size": 10,__\
->>__"object_existence_loss_weight": 0.5,__\
->>__"bounding_box_loss_weight": 5,__\
->>__"optimizer_learning_rate": 0.00001__\
->__}__
+```yaml
+"training_conf": {
+    "enable_training": true,
+    "validation_ratio": 0.03,
+    "epoch_num": 25,
+    "batch_size": 10,
+    "object_existence_loss_weight": 0.5,
+    "bounding_box_loss_weight": 5,
+    "optimizer_learning_rate": 0.00001
+}
+
+```
+
+
 
 
 __enable_training__: enables training, if on false will search for a saved model in the projects directory\
