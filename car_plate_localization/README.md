@@ -186,6 +186,6 @@ __it seems that the detection part of the classifier works quite well but the bo
 
 __Those are used in the Yolo architecture. Those methods will be explored in other projects__.
 
-__please check result folder to see outcome additional examples__.
+__please check result folder to see additional outcome examples__.
 
 __You can also add your own imges by just putting them in the test_images folder__.
