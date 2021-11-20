@@ -72,14 +72,14 @@ __data_dimension__: image dimensions, will be changed according to this input (I
 
 
 >__"training_conf": {__
->>__    "enable_training": true,__\
->>__    "validation_ratio": 0.03,__\
->>__    "epoch_num": 25,__\
->>__    "batch_size": 10,__\
->>__    "object_existence_loss_weight": 0.5,__\
->>__    "bounding_box_loss_weight": 5,__\
->>__    "optimizer_learning_rate": 0.00001__\
->__  }__
+>>__"enable_training": true,__\
+>>__"validation_ratio": 0.03,__\
+>>__"epoch_num": 25,__\
+>>__ "batch_size": 10,__\
+>>__"object_existence_loss_weight": 0.5,__\
+>>__"bounding_box_loss_weight": 5,__\
+>>__"optimizer_learning_rate": 0.00001__\
+>__}__
 
 
 __enable_training__: enables training, if on false will search for a saved model in the projects directory\
