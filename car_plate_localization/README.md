@@ -94,18 +94,18 @@ __optimizer_learning_rate__: adam learning rate\
 ### Model Configuration
 
 ####
->__"model_conf": {
->>__"model_type": "VGG16",
->>__"model_top_config": {
->>>__"Flatten_Layer": {
->>>>__"initializing_parameters": {},
->>>>__"layer_type": "Flatten"
->>>>__},
->>>__"dense_128_1": {
->>>>__"initializing_parameters": {
->>>>__"units": 128,
->>>>__"activation": "relu"
->>>>__},
+>__"model_conf": {\
+>>__"model_type": "VGG16",\
+>>__"model_top_config": {\
+>>>__"Flatten_Layer": {\
+>>>>__"initializing_parameters": {},\
+>>>>__"layer_type": "Flatten"\
+>>>>__},\
+>>>__"dense_128_1": {\
+>>>>__"initializing_parameters": {\
+>>>>__"units": 128,\
+>>>>__"activation": "relu"\
+>>>>__},\
 ####       "input_layer": "Flatten_Layer",
 ####        "layer_type": "Dense"
 ####      },
