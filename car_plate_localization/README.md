@@ -69,7 +69,9 @@ __Non-trainable params: 14,714,688__
 
 
 __annotations_path__: path to xml files of the dataset.\
+
 __images_path__:   path to images files of the dataset.\
+
 __data_dimension__: image dimensions, will be changed according to this input (I used 400x400)
 
 ### Training configuration
@@ -89,18 +91,24 @@ __data_dimension__: image dimensions, will be changed according to this input (I
 ```
 
 __enable_training__: enables training, if on false will search for a saved model in the projects directory\
+
 __validation_ratio__: divides the data set into validation and training\
+
 __epoch_num__: number of epoch for training\
+
 __batch_size__: batch size for every epoch. splits the data\
+
 __object_existence_loss_weight__: object loss weight\
+
 __bounding_box_loss_weight__: bounding box regression loss weight\
+
 __optimizer_learning_rate__: adam learning rate\
 
 
 ### Model Configuration
 
 ```yaml
-"model_conf": { #ggg
+"model_conf": { 
     "model_type": "VGG16",
     "model_top_config": {
       "Flatten_Layer": {
@@ -141,11 +149,11 @@ __optimizer_learning_rate__: adam learning rate\
       }
     }
   },
-
 ```
   
-####model_type: type of the model's back bone - supports VGG16,VGG19 and Resnet50
-####model_top_config: model's top configuration for fine tuning
+__model_type__: type of the model's back bone - supports VGG16,VGG19 and Resnet50\
+
+__model_top_config__: model's top configuration for fine tuning\
 
 ### Callback Configuration
 
