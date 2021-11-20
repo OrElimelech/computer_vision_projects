@@ -58,6 +58,16 @@ __Non-trainable params: 14,714,688__
 ### Data configuration
 
 
+
+```yaml
+"data_set_conf": {
+"annotations_path": "car_plates_dataset/annotations",
+"images_path": "car_plates_dataset/images",
+"data_dimension": 400
+}
+```
+
+
 >__"data_set_conf": {__
 >>__"annotations_path": "car_plates_dataset/annotations",__  \
 >>__"images_path": "car_plates_dataset/images",__  \
