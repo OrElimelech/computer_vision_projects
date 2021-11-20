@@ -88,9 +88,6 @@ __data_dimension__: image dimensions, will be changed according to this input (I
 
 ```
 
-
-
-
 __enable_training__: enables training, if on false will search for a saved model in the projects directory\
 __validation_ratio__: divides the data set into validation and training\
 __epoch_num__: number of epoch for training\
@@ -102,48 +99,50 @@ __optimizer_learning_rate__: adam learning rate\
 
 ### Model Configuration
 
-####
->__"model_conf": {\
->>__"model_type": "VGG16",\
->>__"model_top_config": {\
->>>__"Flatten_Layer": {\
->>>>__"initializing_parameters": {},\
->>>>__"layer_type": "Flatten"\
->>>>__},\
->>>__"dense_128_1": {\
->>>>__"initializing_parameters": {\
->>>>__"units": 128,\
->>>>__"activation": "relu"\
->>>>__},\
-####       "input_layer": "Flatten_Layer",
-####        "layer_type": "Dense"
-####      },
-####      "dense_128_2": {
-####        "initializing_parameters": {
-####          "units": 128,
-####          "activation": "relu"
-####        },
-####        "input_layer": "dense_128_1",
-####        "layer_type": "Dense"
-####      },
-####      "dense_64": {
-####        "initializing_parameters": {
-####          "units": 64,
-####          "activation": "relu"
-####        },
-####        "input_layer": "dense_128_2",
-####        "layer_type": "Dense"
-####      },
-####      "dense_1_existence": {
-####        "initializing_parameters": {
-####          "units": 5,
-####          "activation": "sigmoid"
-####        },
-####        "input_layer": "dense_64",
-####        "layer_type": "Dense"
-####      }
-####    }
-####  }
+```yaml
+"model_conf": { #ggg
+    "model_type": "VGG16",
+    "model_top_config": {
+      "Flatten_Layer": {
+        "initializing_parameters": {},
+        "layer_type": "Flatten"
+      },
+      "dense_128_1": {
+        "initializing_parameters": {
+          "units": 128,
+          "activation": "relu"
+        },
+        "input_layer": "Flatten_Layer",
+        "layer_type": "Dense"
+      },
+      "dense_128_2": {
+        "initializing_parameters": {
+          "units": 128,
+          "activation": "relu"
+        },
+        "input_layer": "dense_128_1",
+        "layer_type": "Dense"
+      },
+      "dense_64": {
+        "initializing_parameters": {
+          "units": 64,
+          "activation": "relu"
+        },
+        "input_layer": "dense_128_2",
+        "layer_type": "Dense"
+      },
+      "dense_1_existence": {
+        "initializing_parameters": {
+          "units": 5,
+          "activation": "sigmoid"
+        },
+        "input_layer": "dense_64",
+        "layer_type": "Dense"
+      }
+    }
+  },
+
+```
   
 ####model_type: type of the model's back bone - supports VGG16,VGG19 and Resnet50
 ####model_top_config: model's top configuration for fine tuning
