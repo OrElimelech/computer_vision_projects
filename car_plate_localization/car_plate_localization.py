@@ -141,26 +141,3 @@ if __name__ == "__main__":
         cv2.imshow("Prediction", image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
-    # max_iterations = validation_data_generator.get_max_generated_images
-    # for iteration_id, generated_data in enumerate(validation_data_generator):
-    #     if iteration_id >= max_iterations:
-    #         break
-    #     for image in generated_data[0]:
-    #         prediction = model_object.predict(np.expand_dims(image, axis=0))[0]
-    #         if round(prediction[0]) == 1:
-    #             x_min = round(prediction[1] * image.shape[1])
-    #             x_max = round(prediction[2] * image.shape[1])
-    #             y_min = round(prediction[3] * image.shape[0])
-    #             y_max = round(prediction[4] * image.shape[0])
-    #             image = cv2.rectangle(image, (x_min, y_min), (x_max, y_max), RECT_COLOR, RECT_WIDTH)
-    #         else:
-    #             text_size = cv2.getTextSize(NO_CAR_PLATE_TEXT, TEXT_PREDICTION_FONT, PREDICTION_FONT_SCALE,
-    #                                         PREDICTION_LINE_THICKNESS)[0]
-    #             text_x = (image.shape[1] - text_size[0]) / 2
-    #             text_y = (image.shape[0] + text_size[1]) / 2
-    #             cv2.putText(image, NO_CAR_PLATE_TEXT,
-    #                         (int(text_x), int(text_y)), TEXT_PREDICTION_FONT, PREDICTION_FONT_SCALE,
-    #                         NO_OBJECT_COLOR, PREDICTION_LINE_THICKNESS)
-    #         cv2.imshow("Generated Image", image)
-    #         cv2.waitKey(0)
-    #         cv2.destroyAllWindows()
